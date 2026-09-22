@@ -259,6 +259,10 @@
 .edu-actions.is-open .edu-detail { max-height:180px; padding-top:12px; opacity:1; }
 .edu-notebook b { font-size:58px; }
 .life .film { animation-duration:42s; }
+.life .film { width:max-content; min-width:max-content; transform:translate3d(0,0,0); will-change:transform; backface-visibility:hidden; animation-name:roll-safe; animation-timing-function:linear; animation-iteration-count:infinite; }
+@keyframes roll-safe { from { transform:translate3d(0,0,0); } to { transform:translate3d(-50%,0,0); } }
+.filmwin { contain:layout paint; }
+@media (prefers-reduced-motion:reduce) { .life .film { animation:none; transform:none; } }
 .life-turn { bottom:14vh; }
 .music { width:48px; height:48px; background:var(--cream); box-shadow:3px 3px 0 var(--ink); }
 .music.playing { background:var(--yellow); }
